@@ -1,0 +1,41 @@
+server:
+  servlet:
+    context-path: /api
+
+spring:
+  jackson:
+    default-property-inclusion: non_null
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/marketplace
+    username: root
+    password: admin
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+        enable_lazy_load_no_trans: true
+        show_sql: true
+    show-sql: true
+    defer-datasource-initialization: true
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    path: /swagger-ui
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+
+
+
+
+
+
